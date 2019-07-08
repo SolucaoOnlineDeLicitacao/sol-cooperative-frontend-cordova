@@ -1,0 +1,28 @@
+{
+    "name": "sol-cooperative",
+    "displayName": "SOL Associcação",
+    "version": "1.0.0",
+    "description": "Sistema Online de Licitação",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Projeto Governo Cidadão",
+    "license": "Apache-2.0",
+    "dependencies": {
+        "cordova-android": "^7.1.2",
+        "cordova-ios": "^4.5.5",
+        "cordova-plugin-cocoapod-support": "^1.6.0",
+        "cordova-plugin-firebase": "git+https://github.com/dpa99c/cordova-plugin-firebase.git",
+        "cordova-plugin-whitelist": "^1.3.3"
+    },
+    "cordova": {
+        "plugins": {
+            "cordova-plugin-whitelist": {}
+        },
+        "platforms": [
+            "ios",
+            "android"
+        ]
+    }
+}
