@@ -2,13 +2,8 @@
 /platforms
 /plugins
 /node_modules
-/www
 
 GoogleService-Info.plist
 GoogleService-Info.plist.*
 google-services.json
 google-services.json.*
-
-.tool-versions
-app-release.apk
-config.xml
