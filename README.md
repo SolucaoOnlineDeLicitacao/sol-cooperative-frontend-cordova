@@ -13,7 +13,7 @@ cordova --version
 
 - Criar symlink da pasta `/dist` - `ln -s ../sol-cooperative-frontend/dist www`
 - Adicionar plataforma iOS `cordova platform add ios@4.5.5`
-- Adicionar plataforma Android `cordova platform add android@7.1.2`
+- Adicionar plataforma Android `cordova platform add android@8.1.0`
 - Listar plataformas instaladas `cordova platform ls`
 - Listar requisitos `cordova requirements`
 
@@ -41,25 +41,28 @@ Exemplo de paths adicionado no `~/.bashrc` ou `~/.zshrc`
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home
 export ANDROID_HOME=/Users/dpedoneze/Library/Android/sdk
 export PATH=${PATH}:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$JAVA_HOME/bin
-export CORDOVA_ANDROID_GRADLE_DISTRIBUTION_URL=https\://services.gradle.org/distributions/gradle-4.6-all.zip
+export CORDOVA_ANDROID_GRADLE_DISTRIBUTION_URL=https\://services.gradle.org/distributions/gradle-5.1.1-all.zip
 ```
 
 Para adicionar `Android target` você precisa fazer isso pela GUI do Android Studio (`Preferences... > Appearance & Behavior > System Settings > Android SDK > aba SDK Platform`).
 
 - Adicionar plugin `cordova plugin add cordova-plugin-firebase`
 > Em 06/05/19 uma atualização do firebase causou um erro no plugin, por isso
-> informar o git https://github.com/dpa99c/cordova-plugin-firebase
+> informar o git https://github.com/dpa99c/cordova-plugin-firebasex
 - Outra opção (ao invés do git) é editar o arquivo /platforms/android/project.properties com as opções:
 ```
-cordova.system.library.2=com.google.firebase:firebase-core:16.0.8
-cordova.system.library.3=com.google.firebase:firebase-messaging:17.5.0
-cordova.system.library.4=com.google.firebase:firebase-config:16.4.1
-cordova.system.library.5=com.google.firebase:firebase-perf:16.2.4
+cordova.gradle.include.1=cordova-plugin-firebasex/cooperative-build.gradle
+cordova.system.library.1=com.google.android.gms:play-services-tagmanager:17.0.0
+cordova.system.library.2=com.google.firebase:firebase-analytics:17.2.1
+cordova.system.library.3=com.google.firebase:firebase-messaging:20.0.0
+cordova.system.library.4=com.google.firebase:firebase-config:19.0.3
+cordova.system.library.5=com.google.firebase:firebase-perf:19.0.1
+cordova.system.library.6=com.google.firebase:firebase-auth:19.1.0
 ```
 
 - Atualizar `platforms/androd/cordova-plugin-firebase/cooperative-build.gradle
 
-`compile 'com.google.firebase:firebase-auth:16.2.1'`
+`compile 'com.google.firebase:firebase-auth:19.1.0'`
 
 - Em alguns casos é necessário execurar `cordova clean android` para atualizar o processo de build
 
