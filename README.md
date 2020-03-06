@@ -85,3 +85,8 @@ cordova.system.library.5=com.google.firebase:firebase-perf:16.2.4
 `zipalign -v 4 app-release-unsigned.apk app-release.apk`
 
 - Atualizar play store com o apk gerado `app-release.apk`
+
+# Passo bônus para gerar o apk para release
+- Executar o comando `yarn build:android`
+- Informar senha do certificado
+- Atualizar play store com o apk gerado `app-release.apk`
