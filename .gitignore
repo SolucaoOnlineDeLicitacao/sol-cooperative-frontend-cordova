@@ -10,3 +10,4 @@ google-services.json.*
 android.keystore
 app-release.apk
 www
+.vscode/settings.json
