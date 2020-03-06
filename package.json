@@ -5,7 +5,7 @@
     "description": "Sistema Online de Licitação",
     "main": "index.js",
     "scripts": {
-    "build": "cordova build android && ./assign.sh",
+    "build:android": "cordova build android && ./assign.sh",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "author": "Projeto Governo Cidadão",
