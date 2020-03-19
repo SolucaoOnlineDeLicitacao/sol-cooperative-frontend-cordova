@@ -73,7 +73,6 @@ cordova.system.library.5=com.google.firebase:firebase-perf:16.2.4
 # Passo para gerar o apk para release
 - Gerar chave para assinar o apk (uma única vez)
 `keytool -genkey -v -keystore android.keystore -alias br.gov.rn.sol.cooperative -keyalg RSA -keysize 2048 -validity 10000`
-> solrn@19
 
 - Gerar apk
 `cordova build android --release`
